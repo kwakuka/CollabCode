@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+
+    <script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
+    <script src="codemirror-5.5/lib/codemirror.js"></script>
+    <link rel="stylesheet" href="codemirror-5.5/lib/codemirror.css">
+    <script src="codemirror-5.5/mode/javascript/javascript.js"></script>
+    <!-- addons edit-->
+    <!-- end of addons-->
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
+
+    <!-- /#wrapper -->
+
+    <!-- jQuery -->
+    <script src="../bower_components/jquery/dist/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+    <!-- Metis Menu Plugin JavaScript -->
+    <script src="../bower_components/metisMenu/dist/metisMenu.min.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="../dist/js/sb-admin-2.js"></script>
+    <!--Video Chat-->
+    <script src="video_chat.js"></script>
+
+
+    <!-- chosen theme stylesheet 
+    Themes: 3024-night
+            blackboard
+            cobalt
+            colorforth
+            vibrant-ink
+            base16-light
+            xq-light
+            3024-day
+             -->
+    <link rel="stylesheet" href="codemirror-5.5/theme/3024-night.css">
+    <link rel="stylesheet" href="codemirror-5.5/theme/blackboard.css">
+    <link rel="stylesheet" href="codemirror-5.5/theme/cobalt.css">
+    <link rel="stylesheet" href="codemirror-5.5/theme/colorforth.css">
+    <link rel="stylesheet" href="codemirror-5.5/theme/vibrant-ink.css">
+    <link rel="stylesheet" href="codemirror-5.5/theme/base16-light.css">
+    <link rel="stylesheet" href="codemirror-5.5/theme/3024-day.css">
+    <link rel="stylesheet" href="codemirror-5.5/theme/xq-light.css">
+    <!-- end of themes -->
+
+    <script src="codemirror-5.5/lib/codemirror.js"></script>
+
+    <!-- languages selection-->
+    <script src="codemirror-5.5/mode/javascript/javascript.js"></script>
+    <script src="codemirror-5.5/mode/python/python.js"></script>
+    <script src="codemirror-5.5/mode/javascript/javascript.js"></script>
+    <script src="codemirror-5.5/mode/javascript/javascript.js"></script>
+    <script src="codemirror-5.5/mode/javascript/javascript.js"></script>
+    <script src="codemirror-5.5/mode/javascript/javascript.js"></script>
+    <script src="codemirror-5.5/mode/javascript/javascript.js"></script>
+    <script src="codemirror-5.5/mode/javascript/javascript.js"></script>
+    <!-- languages selection-->
+    <script src="codemirror-5.5/mode/xml/xml.js"></script>
+     <script src="codemirror-5.5/mode/xml/xml.js"></script>
+    <!--Video Chat -->
+    
+  <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+  <script src='http://static.opentok.com/webrtc/v2.2/js/opentok.min.js'></script>
+
+    <title>CollabCode</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="../bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- MetisMenu CSS -->
+    <link href="../bower_components/metisMenu/dist/metisMenu.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="../dist/css/sb-admin-2.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="../bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <!-- <div id="wrapper"> -->
+
+        <!-- Navigation -->
+        <nav class="navbar navbar-inverse navbar-static-top" role="navigation" style="margin-bottom: 0">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="home.html">CollabCode</a>
+            </div>
+            <!-- /.navbar-header -->
+
+            <ul class="nav navbar-top-links navbar-right">
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                        <i class="fa fa-envelope fa-fw"></i>  <i class="fa fa-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-messages">
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <strong>John Smith</strong>
+                                    <span class="pull-right text-muted">
+                                        <em>Yesterday</em>
+                                    </span>
+                                </div>
+                                <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eleifend...</div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <strong>John Smith</strong>
+                                    <span class="pull-right text-muted">
+                                        <em>Yesterday</em>
+                                    </span>
+                                </div>
+                                <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eleifend...</div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <strong>John Smith</strong>
+                                    <span class="pull-right text-muted">
+                                        <em>Yesterday</em>
+                                    </span>
+                                </div>
+                                <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eleifend...</div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a class="text-center" href="#">
+                                <strong>Read All Messages</strong>
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- /.dropdown-messages -->
+                </li>
+                <!-- /.dropdown -->
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                        <i class="fa fa-tasks fa-fw"></i>  <i class="fa fa-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-tasks">
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <p>
+                                        <strong>Task 1</strong>
+                                        <span class="pull-right text-muted">40% Complete</span>
+                                    </p>
+                                    <div class="progress progress-striped active">
+                                        <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
+                                            <span class="sr-only">40% Complete (success)</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <p>
+                                        <strong>Task 2</strong>
+                                        <span class="pull-right text-muted">20% Complete</span>
+                                    </p>
+                                    <div class="progress progress-striped active">
+                                        <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
+                                            <span class="sr-only">20% Complete</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <p>
+                                        <strong>Task 3</strong>
+                                        <span class="pull-right text-muted">60% Complete</span>
+                                    </p>
+                                    <div class="progress progress-striped active">
+                                        <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
+                                            <span class="sr-only">60% Complete (warning)</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <p>
+                                        <strong>Task 4</strong>
+                                        <span class="pull-right text-muted">80% Complete</span>
+                                    </p>
+                                    <div class="progress progress-striped active">
+                                        <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
+                                            <span class="sr-only">80% Complete (danger)</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a class="text-center" href="#">
+                                <strong>See All Tasks</strong>
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- /.dropdown-tasks -->
+                </li>
+                <!-- /.dropdown -->
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                        <i class="fa fa-bell fa-fw"></i>  <i class="fa fa-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-alerts">
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <i class="fa fa-comment fa-fw"></i> New Comment
+                                    <span class="pull-right text-muted small">4 minutes ago</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <i class="fa fa-twitter fa-fw"></i> 3 New Followers
+                                    <span class="pull-right text-muted small">12 minutes ago</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <i class="fa fa-envelope fa-fw"></i> Message Sent
+                                    <span class="pull-right text-muted small">4 minutes ago</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <i class="fa fa-tasks fa-fw"></i> New Task
+                                    <span class="pull-right text-muted small">4 minutes ago</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <i class="fa fa-upload fa-fw"></i> Server Rebooted
+                                    <span class="pull-right text-muted small">4 minutes ago</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a class="text-center" href="#">
+                                <strong>See All Alerts</strong>
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- /.dropdown-alerts -->
+                </li>
+                <!-- /.dropdown -->
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                        <i class="fa fa-user fa-fw"></i>  <i class="fa fa-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-user">
+                        <li><a href="#"><i class="fa fa-user fa-fw"></i> User Profile</a>
+                        </li>
+                        <li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
+                        </li>
+                        <li class="divider"></li>
+                        <li><a href="login.html"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+                        </li>
+                    </ul>
+                    <!-- /.dropdown-user -->
+                </li>
+                <!-- /.dropdown -->
+            </ul>
+            <!-- /.navbar-top-links -->
+
+            <!-- <div class="navbar-default sidebar" role="navigation"> -->
+            <!-- add this back as a dropdown-->
+             <!--    <div class="sidebar-nav navbar-collapse">
+                    <ul class="nav" id="side-menu">
+                        <li class="sidebar-search">
+                            <div class="input-group custom-search-form">
+                                <input type="text" class="form-control" placeholder="Search...">
+                                <span class="input-group-btn">
+                                    <button class="btn btn-default" type="button">
+                                        <i class="fa fa-search"></i>
+                                    </button>
+                                </span>
+                            </div> -->
+                            <!-- /input-group -->
+                        <!-- </li>
+                        <li>
+                        </li> -->
+                            <!-- /.nav-second-level -->
+                        <!-- </li>
+                        <li>
+                            <a href="home.html"><i class="fa fa-home fa-fw"></i> Home</a>
+                        </li>
+                        <li>
+                            <a href="forms.html"><i class="fa fa-edit fa-fw"></i>New File</a>
+                        </li>
+                        
+                    </ul>
+                </div> -->
+                <!-- /.sidebar-collapse -->
+            <!-- </div> -->
+            <!-- /.navbar-static-side -->
+        </nav>
+
+
+
+            <div class="col-lg-10 col-sm-10 col-xs-10">
+                <textarea id="codeTextArea"></textarea>
+            </div>
+
+            <div id="communication" class="col-lg-2 col-sm-2 col-xs-2">
+                <div class="row">
+                            <!-- =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= -->
+                            <!-- Video -->
+                            <!-- =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= -->
+                                <div class="videochat">
+                                        <div id="video-border">
+                                            <div class="pubnub-relative">
+                                                <div id="video-self">...834y8uask</div>
+                                            </div>
+                                            <div id="video-display">
+                                                <span class="glyphicon glyphicon-flash"></span>
+                                            </div>
+                                        </div>
+                                        <div id="pubnub-relative">
+                                            <div id="video-thumbnail"></div>
+                                        </div>
+                                    </div>
+                               
+                                
+                                <!-- DIAL CONTROLS -->
+                                
+                                    <div class="col-sm-12 col-xs-12"> 
+                                        <div class="form-group">
+                                        <div class="input-group">
+                                        <div class="input-group-addon">
+                                            <span class="glyphicon glyphicon-th"></span>
+                                        </div>
+                                        <input id="number" class="form-control" type="number" placeholder="Type Recipient's #">
+                                        </div>
+                                    </div> 
+                                    <div class="col-sm-12 col-xs-12 dial-buttons">
+                                        <center><button id="dial" class="btn btn-primary">
+                                            <span class="glyphicon glyphicon-earphone"></span>
+                                        </button>
+                                        <button id="hangup" class="btn btn-danger">
+                                            <span class="glyphicon glyphicon-ban-circle"></span>
+                                        </button></center>                    
+                                    </div>
+                                </div>                      
+                    
+                    
+                    <script src="code_updater.js"></script>
+                    <script src="chat.js"></script>
+                    <script src="/js/main.js"></script>
+                    <!-- =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= -->
+                    <!-- My Phone Number & Dial Areas -->
+                    <!-- =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= -->
+                            <!-- =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= -->
+                            <!-- MY PHONE NUMBER -->
+                            <!-- =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= -->
+                            <div>
+                                <div id="phone_number">
+                                <div id="my-number-section" class="text-center">
+                                    <div id="my-number">LOADING</div>
+                                    <div id="my-number-title" class="hidden-sm hidden-xs">
+                                        this is <strong>your phone number</strong>
+                                    </div>
+                                </div>
+                                    <div class="col-lg-12 col-sm-12">
+                                    <div id="my-number-permalink">
+                                        <a id="my-number-link" href="...">link</a> 
+                                    </div>
+                                    </div>
+                                </div>
+                            </div>
+                </div>
+                <div class="row">
+                    <div id="messagesDiv"></div>  
+                </div>
+                <!-- <div class="row">
+                    <input type="text" id="nameInput" placeholder="Name">   
+                </div> -->
+                <div class="row">           
+                    <input type="text" id="messageInput" placeholder="Message">
+                </div>
+            </div>
+                
+            
+
+            <!-- =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- -->
+            <!-- WebRTC Peer Connections -->
+            <!-- =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- -->
+            <script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+            <!-- IMPORTANT: THIS IS AN UNMINIFIED DEVELOPMENT PUBNUB LIBRARY 
+                replace this with the latest versioned, minified CDN lib link before 
+                you deploy your app to a production enviornment.
+                https://github.com/pubnub/javascript#cdn-links
+            -->
+            <script src="https://cdn.pubnub.com/pubnub-dev.js"></script>
+            <script src="js/webrtc.js"></script>
+            <script src="js/sound.js"></script>
+            <script>(function(){
+
+            // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+            // Generate Random Number if Needed
+            // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+            var urlargs         = urlparams();
+            var my_number       = PUBNUB.$('my-number');
+            var my_link         = PUBNUB.$('my-number-link');
+            var number          = urlargs.number || Math.floor(Math.random()*999+1);
+
+            my_number.number    = number;
+            my_number.innerHTML = ''+my_number.number;
+            my_link.href        = location.href.split('?')[0] + '?call=' + number;
+            my_link.innerHTML   = my_link.href;
+
+            // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+            // Update Location if Not Set
+            // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+            if (!('number' in urlargs)) {
+                urlargs.number = my_number.number;
+                location.href = urlstring(urlargs);
+                return;
+            }
+
+            // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+            // Get URL Params
+            // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+            function urlparams() {
+                var params = {};
+                if (location.href.indexOf('?') < 0) return params;
+
+                PUBNUB.each(
+                    location.href.split('?')[1].split('&'),
+                    function(data) { var d = data.split('='); params[d[0]] = d[1]; }
+                );
+
+                return params;
+            }
+
+            // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+            // Construct URL Param String
+            // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+            function urlstring(params) {
+                return location.href.split('?')[0] + '?' + PUBNUB.map(
+                    params, function( key, val) { return key + '=' + val }
+                ).join('&');
+            }
+
+            // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+            // Calling & Answering Service
+            // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+            var video_out = PUBNUB.$('video-display');
+            // var img_out   = PUBNUB.$('video-thumbnail');
+            var img_self  = PUBNUB.$('video-self');
+
+            var phone     = window.phone = PHONE({
+                number        : my_number.number, // listen on this line
+                publish_key   : 'pub-c-561a7378-fa06-4c50-a331-5c0056d0163c',
+                subscribe_key : 'sub-c-17b7db8a-3915-11e4-9868-02ee2ddab7fe',
+                ssl           : true
+            });
+
+            // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+            // Video Session Connected
+            // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+            function connected(session) {
+                video_out.innerHTML = '';
+                video_out.appendChild(session.video);
+
+                PUBNUB.$('number').value = ''+session.number;
+                sounds.play('sound/hi');
+                console.log("Hi!");
+            }
+
+            // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+            // Video Session Ended
+            // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+            function ended(session) {
+                set_icon('facetime-video');
+                img_out.innerHTML = '';
+                sounds.play('sound/goodbye');
+                console.log("Bye!");
+            }
+
+            // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+            // Video Session Ended
+            // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+            function set_icon(icon) {
+                video_out.innerHTML = '<span class="glyphicon glyphicon-' +
+                    icon + '"></span>';
+            }
+
+            // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+            // Request fresh TURN servers from XirSys
+            // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+            function get_xirsys_servers() {
+                var servers;
+                $.ajax({
+                    type: 'POST',
+                    url: 'https://api.xirsys.com/getIceServers',
+                    data: {
+                        room: 'default',
+                        application: 'default',
+                        domain: 'www.pubnub-example.com',
+                        ident: 'pubnub',
+                        secret: 'dec77661-9b0e-4b19-90d7-3bc3877e64ce',
+                    },
+                    success: function(res) {
+                        res = JSON.parse(res);
+                        if (!res.e) servers = res.d.iceServers;
+                    },
+                    async: false
+                });
+                return servers;
+            }
+
+            // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+            // Start Phone Call
+            // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+            function dial(number) {
+                // Dial Number
+                var session = phone.dial(number, get_xirsys_servers());
+
+                // No Dupelicate Dialing Allowed
+                if (!session) return;
+
+                // Show Connecting Status
+                set_icon('send');
+            }
+
+            // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+            // Ready to Send or Receive Calls
+            // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+            phone.ready(function(){
+                // Ready To Call
+                set_icon('facetime-video');
+
+                // Auto Call
+                if ('call' in urlargs) {
+                    var number = urlargs['call'];
+                    PUBNUB.$('number').value = number;
+                    dial(number);
+                }
+
+                // Make a Phone Call
+                PUBNUB.bind( 'mousedown,touchstart', PUBNUB.$('dial'), function(){
+                    var number = PUBNUB.$('number').value;
+                    if (!number) return;
+                    dial(number);
+                } );
+
+                // Hanup Call
+                PUBNUB.bind( 'mousedown,touchstart', PUBNUB.$('hangup'), function() {
+                    phone.hangup();
+                    set_icon('facetime-video');
+                } );
+
+                // Take Picture
+                PUBNUB.bind( 'mousedown,touchstart', PUBNUB.$('snap'), function() {
+                    var photo = phone.snap();
+                    img_self.innerHTML = ' ';
+                    img_self.appendChild(photo.image);
+                    setTimeout( function() { img_self.innerHTML = ' ' }, 750 );
+                } );
+            });
+
+            // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+            // Received Call Thumbnail
+            // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+            function thumbnail(session) {
+                img_out.innerHTML = '';
+                img_out.appendChild(session.image);
+                img_out.appendChild(phone.snap().image);
+            }
+
+            // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+            // Receiver for Calls
+            // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+            phone.receive(function(session){
+                session.message(message);
+                session.thumbnail(thumbnail);
+                session.connected(connected);
+                session.ended(ended);
+            });
+
+
+            // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+            // Update Local GUI
+            // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+            function add_chat( number, text ) {
+                if (!text.replace( /\s+/g, '' )) return true;
+
+                var newchat       = document.createElement('div');
+                newchat.innerHTML = PUBNUB.supplant(
+                    '<strong>{number}: </strong> {message}', {
+                    message : safetxt(text),
+                    number  : safetxt(number)
+                } );
+                chat_out.insertBefore( newchat, chat_out.firstChild );
+            }
+
+            // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+            // WebRTC Message Callback
+            // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+            function message( session, message ) {
+                add_chat( session.number, message.text );
+            }
+
+            // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+            // XSS Prevent
+            // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+            function safetxt(text) {
+                return (''+text).replace( /[<>]/g, '' );
+            }
+
+            // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+            // Problem Occured During Init
+            // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+            phone.unable(function(details){
+                console.log("Alert! - Reload Page.");
+                console.log(details);
+                set_icon('remove');
+            });
+
+            // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+            // Debug Output
+            // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+            phone.debug(function(details){
+                 // console.log(details);
+            });
+
+            })();</script>
+    </div> 
+</body>
+</html>

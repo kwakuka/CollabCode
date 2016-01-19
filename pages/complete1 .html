@@ -1,0 +1,60 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<head>
+<link rel="stylesheet" href="widgEditor/css/widgEditor.css" />
+<script src="widgEditor/scripts/widgEditor.js"></script>
+<script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
+<script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
+<script src="codemirror-5.5/lib/codemirror.js"></script>
+<link rel="stylesheet" href="codemirror-5.5/lib/codemirror.css">
+<script src="codemirror-5.5/mode/javascript/javascript.js"></script>
+<!-- chosen theme stylesheet -->
+<link rel="stylesheet" href="codemirror-5.5/theme/3024-night.css">
+<script src="codemirror-5.5/lib/codemirror.js"></script>
+<script src="codemirror-5.5/mode/javascript/javascript.js"></script>
+<script src="codemirror-5.5/mode/xml/xml.js"></script>
+		
+		
+		<style type="text/css">
+			#messagesDiv{
+				width: 250px;
+				height: 200px;
+	   			padding: 25px;
+	   			border: 5px solid black;
+	   			overflow: scroll;
+				position: absolute;
+				right: 1%;
+				top: 360px;
+			}
+			#nameInput{
+				position:absolute;
+				right: 15%;
+				top: 94%;	
+			}
+			#messageInput{
+	   			position: absolute;
+				right: 1%;
+				top: 94%;	
+			}
+			.CodeMirror { height:610px; max-width: 960px;  auto; border: 1px solid #ddd; }
+			.CodeMirror-scroll {height:610px; max-width: 960px; }
+			.CodeMirror pre { padding-left: 7px; line-height: 1.25; }
+		</style>
+		
+
+</head>   
+<body>
+		<div id="messagesDiv"></div>
+		<input type="text" id="nameInput" placeholder="Name">
+		<input type="text" id="messageInput" placeholder="Message">
+
+
+
+		<textarea id="codeTextArea">kwaku</textarea>
+		<script src="code_updater.js"></script>
+		<script src="chat.js"></script>
+		<script src="video_chat.js"></script>
+
+
+	
+</body>
+</html>
